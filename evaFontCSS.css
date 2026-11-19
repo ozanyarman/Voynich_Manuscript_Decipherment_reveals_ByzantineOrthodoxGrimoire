@@ -1,0 +1,231 @@
+@charset "UTF-8";
+@namespace tei "http://www.tei-c.org/ns/1.0";
+/* The TEI namespace URI is permanent (TEI Technical Council, 2002).
+   The XML currently declares no namespace; unprefixed selectors below
+   match elements in ANY namespace, so this sheet works either way. */
+
+/* ====================================================================
+   1. REGISTRY OF THE VOYNICH MANUSCRIPT FONT (single declaration)
+   ==================================================================== */
+@font-face {
+    font-family: 'VoynichFont';
+    src: url('EVA2.ttf');
+}
+
+/* ====================================================================
+   2. STRUCTURE
+   ==================================================================== */
+surface, zone {
+    display: block !important;
+    visibility: visible !important;
+}
+
+surface {
+    border-style: solid;
+}
+
+figure {
+    display: inline;
+    font-family: Arial, sans-serif;
+}
+
+graphic {
+    max-width: 300px;
+}
+
+person {
+    display: block;
+}
+
+line {
+    font-family: 'VoynichFont', serif;
+    line-height: 1.2;
+    display: block !important;
+    visibility: visible !important;
+    padding-left: 1em;
+}
+
+/* Alignment: token match (~=) works regardless of token order,
+   e.g. rendition="#Ad #Pc" */
+line[rendition~="#Pc"] { text-align: center; }
+line[rendition~="#Pr"] { text-align: right; }
+line[rendition~="#Pt"] { text-align: right; }
+
+/* ====================================================================
+   3. CLEAN DATA NODE MASK
+   Raw EVA text (and its glyphs) is collapsed to 0px; only the
+   transliteration in line::before is visible.
+   ==================================================================== */
+line, line * {
+    font-size: 0px !important;
+}
+
+/* Editorial notes stay readable (declared after the mask, so the
+   13px !important wins over the 0px !important at equal specificity) */
+note, comment, firstNote {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 13px !important;
+    color: #666666 !important;
+}
+
+note[type="comment"] {
+    font-family: Arial, sans-serif;
+}
+
+/* ====================================================================
+   4. AUTOMATED INLINE FONT FALLBACK ENGINE
+   ==================================================================== */
+/* A single, global pseudo-element handles the entire line automatically.
+   The font family stack provides character-by-character fallback switches. */
+line::before {
+    display: inline;
+    font-size: 16px !important;
+    visibility: visible !important;
+    white-space: pre-wrap;
+    color: #000000 !important;
+
+    /* Font fallback pipeline: characters not mapped in the Voynich font
+       fall through to fonts that actually contain the Mathematical
+       Sans-Serif block (U+1D5A0 ff.); Arial alone does not. */
+    font-family: 'VoynichFont', 'Cambria Math', 'STIX Two Math',
+                 'Noto Sans Math', 'DejaVu Sans', Arial, Helvetica,
+                 sans-serif !important;
+
+    /* Dynamically translates targets into fallback-safe readable variants,
+       guaranteeing they bypass EVA glyph overrides without breaking sequence,
+       while watching out for alternative readings, as well as dislosing the
+       possible name of the author "𝗈𝗎𝗂-𝗒𝗂-𝖺𝗇-𝗇𝗂𝖲" at f68r2 line 31 of ZL3b-n.
+       Editorial <comment> elements and XML comment nodes are excluded from
+       the source string, so transcriber notes are never transliterated. */
+    content:
+oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(
+oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(
+oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(
+oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(
+oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(
+oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(
+oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(
+oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(
+oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(
+oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(
+oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(
+oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_replace(oxy_xpath("string-join(for $n in node()[not(self::comment())][not(local-name() = 'comment')] return if (local-name($n) = 'choice') then concat('⟦', string-join($n/*[local-name() = 'unclearAlt'] ! string-join(descendant-or-self::text()[not(ancestor::*[local-name() = 'comment'])], ''), ' / '), '⟧') else string-join($n/descendant-or-self::text()[not(ancestor::*[local-name() = 'comment'])], ''), '')"),
+"çèéê", "𝗈𝗎𝗂-𝗒𝗂-𝖺𝗇-𝗇𝗂𝖲"),
+"ckh", "𝖨𝚺"),
+"fch", "𝖷𝖱𝖨𝖲𝖳𝖮𝖴"),
+"kch", "𝖳𝖧𝖤𝖮𝖲"),
+"cth", "𝖳𝖧𝖤𝖮𝖴"),
+"tch", "𝖳𝖧𝖤𝖮"),
+"pch", "𝖸𝖨𝖤"),
+"cfh", "𝖸𝖨𝖮"),
+"cph", "𝖸𝖨𝖮𝖲"),
+"¢ˆ", "𝖸𝖨𝖮𝖴"),
+"ii", "𝗒𝖾"),
+"sh", "𝗈"),
+"ch", "𝗈𝗂𝖲"),
+"f", "𝖨𝖧𝚺"),
+"“", "𝖸𝖨𝖮𝖨"),
+"›", "𝖳𝖧𝖤𝖮𝖨"),
+"À", "𝖪𝖸𝖱𝖨"),
+"„", "𝖪𝖸𝖱𝖨𝖤"),
+"Ø", "𝖪𝖸𝖱𝖨𝖮"),
+"†", "𝖪𝖸𝖱𝖨𝖮𝖭"),
+"Ä", "𝖪𝖸𝖱𝖨𝖮𝖲"),
+"Ç", "𝖪𝖸𝖱𝖨𝖮𝖴"),
+"P", "𝖷𝖱𝖨"),
+"q", "𝖷𝖱𝖨𝖲"),
+"”", "𝖷𝖱𝖨𝖲𝖳"),
+"Â", "𝖷𝖱𝖨𝖲𝖳𝖤"),
+"c", "𝖷𝖱𝖨𝖲𝖳𝖨𝖮"),
+"ó", "𝖷𝖱𝖨𝖲𝖳𝖮𝖲"),
+"·", "𝖯𝖠𝖳𝖨𝖱"),
+"¸", "𝖯𝖠𝖳𝖱𝖨"),
+"°", "𝖯𝖠𝖳𝖤𝖱"),
+"‚", "𝖯𝖠𝖳𝖤𝖱𝖠"),
+"z", "𝖧𝖠𝖦𝖨𝖮𝖴-𝖯𝖭𝖤𝖴𝖬𝖠𝖳𝖮𝖲"),
+"…", "𝖧𝖠𝖦𝖨𝖮-𝖯𝖭𝖤𝖴𝖬𝖠𝖳𝖨"),
+"‹", "𝖧𝖠𝖦𝖨𝖮𝖭-𝖯𝖭𝖤𝖴𝖬𝖠"),
+"ƒ", "𝖳𝖱𝖨𝖠𝖣𝖮𝖲"),
+"«", "𝖳𝖱𝖨𝖠𝖣𝖠"),
+"’", "𝖳𝖱𝖨𝖠𝖣"),
+"œ", "𝖳𝖱𝖨𝖠𝖲"),
+"±", "𝖳𝖱𝖨𝖠"),
+"'", "′"),
+"a", "˘"),
+"¨", "𝖺𝖾"),
+"¯", "𝖺𝗂"),
+"¢", "𝖺𝗒"),
+"g", "𝗑"),
+"Ñ", "𝗑𝗂"),
+"º", "𝖽"),
+"s", "𝖾"),
+"š", "𝖾𝖺"),
+"¤", "𝖾𝗂"),
+"Œ", "𝖾𝗅"),
+"ô", "𝖾𝗈"),
+"Š", "𝖾𝖲"),
+"d", "𝖾𝗒"),
+"ö", "𝖾𝗂𝗅"),
+"–", "𝖾𝗂𝖲"),
+"©", "𝖾𝗅𝗂"),
+"Ò", "𝖾𝗈𝖲"),
+"É", "𝖾𝗈𝗎"),
+"j", "𝖾𝖲𝗈"),
+"õ", "𝗉𝗁𝗂"),
+"Ð", "𝗁"),
+"È", "𝗁𝖾"),
+"¾", "𝗁𝗂"),
+"™", "𝗁𝗈"),
+"Î", "𝗂"),
+"¦", "𝗂𝖺"),
+"o", "𝗂𝖾"),
+"§", "𝗂𝗁"),
+"´", "𝗂𝗅"),
+"y", "𝗂𝗈"),
+"e", "𝗂𝗍𝗁"),
+"t", "𝗂𝖲"),
+"k", "𝗂𝗒"),
+"ð", "𝗂𝖺𝗈"),
+"b", "𝗂𝖺𝖲"),
+"®", "𝗂𝖾𝖲"),
+"‡", "𝗂𝖲𝖾"),
+"u", "𝗂𝖲𝗎"),
+"¥", "𝗂𝗒𝗈"),
+"»", "𝗂𝗒𝖲"),
+"¡", "𝖮"),
+"Õ", "𝗈𝖺"),
+"I", "𝗈𝖾"),
+"μ", "𝗈𝗂"),
+"£", "𝗈𝗁"),
+"Á", "𝗈𝗂"),
+"n", "𝗈𝖲"),
+"Ó", "𝗈𝗎"),
+"¿", "𝗈𝖾𝗂"),
+"v", "𝗈𝗂𝖾"),
+"‰", "𝗈𝗎𝖾"),
+"ò", "𝗈𝗎𝗒"),
+"•", "𝗈𝗒𝖲"),
+"Å", "𝗌𝖺"),
+"h", "𝗌𝖾"),
+"ª", "𝗌𝗂"),
+"—", "𝗌𝗈"),
+"x", "𝗌𝗒"),
+"½", "𝗎"),
+"‘", "𝗎𝗂"),
+"i", "𝗒"),
+"Ë", "𝗒𝖾"),
+"Ÿ", "𝗒𝗂"),
+"m", "𝗒𝗈"),
+"r", "𝖲"),
+"Ô", "𝖲𝖾"),
+"˜", "𝖲𝗂"),
+"l", "𝖲𝗈"),
+"¼", "𝖲𝖾𝗈"),
+"¹", "𝖲𝗈𝖾"),
+"ñ", "𝖲𝗈𝗂"),
+"p", "𝖲𝗈𝗎"),
+"ˆ", "𝖲𝗈𝗒"),
+"¬", "𝖲𝗎𝗈")
+ !important;
+}
