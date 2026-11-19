@@ -15,7 +15,7 @@ The *Yarman Mapping* using CSS and Oxygen XML editor reveals that the [@*Voynich
 
 This repository houses, besides the requisite and wonderful *`EVA2.tff`* font by the late Gabriel Landini (who passed away on 19 October 2025, as announced by his colleague Rasha Abu Eid of the University of Birmingham on 20 October 2025), the **`evaFontCSS.css`** custom stylesheet, alongside the updated TEI/XML files `herbal.xml`, `ZL3b-n.xml`, and `ZL3b-n_updated.xml` files, as well as their rendered PDF outputs `herbal.pdf`, `ZL3b-n.pdf`, and `ZL3b-n_updated.pdf`. When loaded in **Oxygen XML Editor** over *Extensible Voynich Alphabet (EVA)* transcriptions (`EVA2.ttf`), for which the user must navigate to *Options>Preferences>Document Type Associations>Create New TEI Association* under the said Editor IN ORDER TO CORRECTLY REINTERPRET AND REPARSE THE MENTIONED XML FILES, the stylesheet executes a deterministic, nested `oxy_replace()` pipeline that converts Voynichese glyphs into **Mathematical Sans-Serif Unicode** (`U+1D5A0`–`U+1D5FF`) characters.
 
-Rather than treating Voynichese as standard vernacular prose, the *Yarman Mapping* models the 15th-century codex as a **Byzantine Greek Orthodox grimoire / mnemonic ritual book** (analogous to an Arabic *Jifr* in a Middle Eastern Islamic context). Under this hypothesis, the scribe seems to have prosodically adapted the opening structure of the **Great Doxology**, and embedded historical Christian *Nomina Sacra* (`𝖨𝖧𝚺`, `𝖨𝚺`) and **ΙΧΘΥΣ** (*ICHTHYS*) acrostic/rebus roots (`𝖳𝖧𝖤𝖮𝖴`, `𝖸𝖨𝖮𝖲`, `𝖷𝖱𝖨𝖲𝖳𝖮𝖴`) into continuous, block-chopped phonetic vocalizations of the name of Jesus (*Iesous*) and His epithets across hundreds of folios.
+Rather than treating Voynichese as standard vernacular prose, the *Yarman Mapping* models the 15th-century codex as a **Byzantine Greek Orthodox grimoire / mnemonic ritual book** (analogous to an Arabic *Jifr* in a Middle Eastern Islamic context). Under this hypothesis, the scribe seems to have prosodically adapted the opening structure of the **Great Doxology**, and embedded historical Christian *Nomina Sacra* (`𝖨𝖧𝚺`, `𝖨𝚺`) alongside three more of the five **ΙΧΘΥΣ** (*ICHTHYS*) acrostic/rebus roots (`𝖳𝖧𝖤𝖮𝖴`, `𝖸𝖨𝖮𝖲`, `𝖷𝖱𝖨𝖲𝖳𝖮𝖴`) into continuous, block-chopped phonetic vocalizations of the name of Jesus (*Iesous*) and His epithets across hundreds of folios.
 
 ---
 
@@ -58,12 +58,6 @@ roots of the early Christian **ΙΧΘΥΣ** acrostic:
 > v1.0 and is therefore *not* claimed. The parallel is offered as a partial
 > structural analogy, not a complete acrostic.
 
-> **Note on ΙΧΘΥΣ.** Four of the five acrostic constituents are instantiated in
-> the present mapping: Ι (Ἰησοῦς → `𝖨𝖧𝚺`, `𝖨𝚺`), Χ (Χριστός → `𝖷𝖱𝖨𝖲`, `𝖷𝖱𝖨𝖲𝖳𝖮𝖴`),
-> Θ (Θεοῦ → `𝖳𝖧𝖤𝖮𝖴`) and Υ (Υἱός → `𝖸𝖨𝖮𝖲`). The fifth, **Σ (Σωτήρ, "Savior")**,
-> has no rule in v1.0 and is therefore *not* claimed. The parallel here is offered
-> as a partial structural analogy, not as a complete acrostic.
-
 **Counting method.** Figures are overlapping substring counts on the NFKC-
 normalised PDF text layer, obtained by direct count of the normalised strings
 (`IHΣ`, `IΣ`, `THEOU`, `THEOS`, `YIOS`, `YIOU`, `KYRIE`). They are counts of
@@ -88,10 +82,10 @@ witnesses**. `Herbal.pdf` overlaps both.
 ### 2. Opening Sequence (`f1r`, Line 1 — `ZL3b-n_updated.pdf`)
 - **Raw EVA:** `fachys.ykal.ar.ataiin.shol.shory.cthores.y.kor.sholdy ... sory.ckhar.or`
 - **Current CSS Output:** `𝖨𝖧𝚺˘𝗈𝗂𝖲𝗂𝗈𝖾.𝗂𝗈𝗂𝗒˘𝖲𝗈.˘𝖲.˘𝗂𝖲˘𝗒𝖾𝗈𝖲.𝗈𝗂𝖾𝖲𝗈.𝗈𝗂𝖾𝖲𝗂𝗈.⟦𝖳𝖧𝖤𝖮𝖴 / 𝗂𝖾𝗂𝖲𝗂𝖾⟧𝖲𝗂𝗍𝗁𝖾.𝗂𝗈.𝗂𝗒𝗂𝖾𝖲.𝗈𝗂𝖾𝖲𝗈𝖾𝗒𝗂𝗈 ... 𝖾𝗂𝖾𝖲𝗂𝗈.𝖨𝚺˘𝖲.𝗂𝖾𝖲 ...`
-- **Structure:** Immediately begins with the sacred abbreviation **`𝖨𝖧𝚺`** (*IYS*), followed by breve-separated phonetic punctuations and not-anymore-so-uncertain `<choice>` readings that are cleanly rendered inside `⟦ ... / ... ⟧` brackets.
+- **Structure:** Immediately begins with the sacred abbreviation **`𝖨𝖧𝚺`** (*IHS*), followed by breve-separated phonetic punctuations and not-anymore-so-uncertain `<choice>` readings that are cleanly rendered inside `⟦ ... / ... ⟧` brackets.
 
 ### 3. Folio `f49v` (Cyclamen / Lunaria) 26-Mark Vertical Key
-On folio `f49v` (`Herbal.pdf`, p. 74), a vertical column of 26 Voynichese characters runs down the left margin, along with handwritten Arabic numerals `1–5` right next to them that correspond to the first paragraph's second, third, fourth, fifth, and sixth lines, respectively. Under the current `evaFontCSS.css` rules, the 26-mark column renders deterministically without rearrangement:
+On folio `f49v` (`Herbal.pdf` p. 74, corresponding to p. 96 of the original digitized pagination), a vertical column of 26 Voynichese characters, a vertical column of 26 Voynichese characters runs down the left margin, along with handwritten Arabic numerals `1–5` right next to them that correspond to the first paragraph's second, third, fourth, fifth, and sixth lines, respectively. Under the current `evaFontCSS.css` rules, the 26-mark column renders deterministically without rearrangement:
 
 ```text
 f  -> 𝖨𝖧𝚺
@@ -124,7 +118,8 @@ y  -> 𝗂𝗈
 
 where Yarman interprets `𝖲𝗈𝗎` as either `𝖲𝗈𝗎` or `𝖲𝗈𝗇`, and `𝗂𝗍𝗁` as either (𝗂 + 𝗍𝗁) or as (𝗂 + 𝖲) depending on the circumstance. As such, this new arrangement spells out: ``IHΣ, IESIOIS ELIYESON! IE KYRIIOIS ELEISON! IE KYRIIOIS ELEIOI THIYIO!``
 
-**Applied vocalization rules applied stated in full:**
+
+**Applied vocalization rules stated in full:**
 1. Marks 5, 13, 20 (`e`): `𝗂𝗍𝗁` read as (𝗂 + 𝖲) → `iS`. Three substitutions, −3 characters.
 2. Mark 24 (`e`): `𝗂𝗍𝗁` read literally as (𝗂 + 𝗍𝗁), retained across the unit boundary.
 3. Mark 22 (`d`): `𝖾𝗒` read as `e`, the `y` elided in cantillation. One elision, −1 character.
@@ -176,6 +171,12 @@ constraints. A rule that fires exactly once cannot be tested, and unique four-
 glyph sequences are common in the codex. It is recorded as a conjecture, and
 is excluded from all counts and all statistical tests. So, it is not advanced
 to support any other claim in this repository.
+
+> **Withdrawn substitution.** Earlier revisions assigned `sh` → `𝖸𝖨𝖮𝖴`, yielding
+> 4,539 occurrences in the ZL corpus. In v1.0 `sh` → `𝗈`, and `𝖸𝖨𝖮𝖴` is produced
+> by the rare ligature `¢ˆ` (1 occurrence in each PDF). The figure 4,539 does
+> not only apply to v1.0 and is withdrawn. `𝖪𝖸𝖱𝖨𝖤` (vocative) occurs 10 times in
+> `ZL3b-n_updated.pdf` and 4 times in `Herbal.pdf`.
 
 ---
 
@@ -251,7 +252,7 @@ Drawing directly from the video explanations on his YouTube channel, here is the
 ### Phase 3: The Cyclamen Marginalia & "Black Magic Book" Pivot (Nov 14–16, 2026)
 
 * **The `f49v` Key:** In his later videos Yarman anchored his calibration to the vertical column of glyphs accompanied by handwritten Arabic numerals (`1, 2, 3, 4, 5`) on the Cyclamen plant folio (`f49v`).
-* **Deciphering the Incantation:** Reading that marginal sequence as *"IHS, ISSEIS, ELEYZOIS KYRIEIS! ELEIZOIS KYRIEIS! ELEYISEI!"* (O Jesus, Jesus, Mercy Lord! Show Mercy!), he concluded that the expensive calfskin manuscript was not a student's drill book, but a **Christianized *Jifr* or Byzantine Greek grimoire**. He proposed its purpose was occult and ritualistic: casting blessings or curses, enchanting botanical remedies or poisons, and consulting the stars for fortune.
+* **Deciphering the Incantation:** Reading that marginal sequence as the superseded *"IHS, ISSEIS, ELEYZOIS KYRIEIS! ELEIZOIS KYRIEIS! ELEYISEI!"* (O Jesus, Jesus, Mercy Lord! Mercy Lord! Show Mercy!), he concluded that the expensive calfskin manuscript was not a student's drill book, but a **Christianized *Jifr* or Byzantine Greek grimoire**. He proposed its purpose was occult and ritualistic: casting blessings or curses, enchanting botanical remedies or poisons, and consulting the stars for fortune.
 
 ---
 
