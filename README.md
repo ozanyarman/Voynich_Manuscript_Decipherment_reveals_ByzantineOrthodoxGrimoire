@@ -1,5 +1,5 @@
 ## Voynich_Manuscript_Decipherment_reveals_ByzantineOrthodoxGrimoire
-The *Yarman Mapping*, through the usage of CSS and Oxygen XML editor, reveals that the [@*Voynich Manuscript*](https://en.wikipedia.org/wiki/Voynich_manuscript) is likely a **spell book**, or a **black magic chant book** chock-full of *macaronic Greek* pronunciations of the name of **Jesus Christ (S.A.W.)**, where His Christian epithets like *YIOS* and associations like *THEO* are acrostically used as syllabic content to sometimes constitute his flexed out and musicologically suggestive repetitious name that is chaotically laid out across regular-sized word blocks for hundreds of pages as preliminarily tackled here [@Updated Full Voynich Revelation](https://www.youtube.com/watch?v=VnYrOcyYjLU&amp;t=16s) and here [@Voynich is a BLACK MAGIC BOOK!!](https://www.youtube.com/watch?v=kRqcrFLZz6o&amp;t=130s).
+The *Yarman Mapping*, through the usage of CSS and Oxygen XML editor, could indeed be said to reveal that the [@*Voynich Manuscript*](https://en.wikipedia.org/wiki/Voynich_manuscript) is likely a **spell book**, or a **black magic chant book** chock-full of *macaronic Greek* pronunciations of the name of **Jesus Christ (S.A.W.)**, where His Christian epithets like *YIOS* and associations like *THEO* are acrostically used as syllabic content to sometimes constitute his flexed out and musicologically suggestive repetitious name that is chaotically laid out across regular-sized word blocks for hundreds of pages as preliminarily tackled here [@Updated Full Voynich Revelation](https://www.youtube.com/watch?v=VnYrOcyYjLU&amp;t=16s) and here [@Voynich is a BLACK MAGIC BOOK!!](https://www.youtube.com/watch?v=kRqcrFLZz6o&amp;t=130s).
 
 This upload is version 1.0, with subsequent revisions and additions to be indicated much further below.
 
@@ -15,9 +15,9 @@ This upload is version 1.0, with subsequent revisions and additions to be indica
 
 ## Overview
 
-This repository houses, besides the requisite and wonderful *`EVA2.tff`* font by the late Gabriel Landini (who passed away on 19 October 2025, as announced by his colleague Rasha Abu Eid of the University of Birmingham on 20 October 2025), the **`evaFontCSS.css`** custom stylesheet, alongside the updated TEI/XML files `herbal.xml`, `ZL3b-n.xml`, and `ZL3b-n_updated.xml`, as well as their rendered PDF outputs `herbal.pdf`, `ZL3b-n.pdf`, and `ZL3b-n_updated.pdf`.
+This repository houses, besides the requisite and wonderful *Extensible Voynich Alphabet (EVA)* font (*`EVA2.tff`*) by the late Gabriel Landini (who passed away on 19 October 2025, as announced by his colleague Rasha Abu Eid of the University of Birmingham on 20 October 2025), the **`evaFontCSS.css`** custom stylesheet, alongside the updated TEI/XML files `herbal.xml`, `ZL3b-n.xml`, and `ZL3b-n_updated.xml`, as well as their rendered PDF outputs `herbal.pdf`, `ZL3b-n.pdf`, and `ZL3b-n_updated.pdf`.
 
-After the transcriptions are loaded in **Oxygen XML Editor** over the *Extensible Voynich Alphabet (EVA)* (`EVA2.ttf`), following which the user must navigate to *Options>Preferences>Document Type Associations>Create New TEI Association* under the said Editor IN ORDER TO MAKE SURE THE MENTIONED XML FILES ARE CORRECTLY REINTERPRETED AND REPARSED, the stylesheet executes a deterministic, nested `oxy_replace()` pipeline that converts Voynichese glyphs into **Mathematical Sans-Serif Unicode** (`U+1D5A0`–`U+1D5FF`) characters. *The Yarman Mapping* is hence a cascading list for the serial, non-clashing, and uninterrupted transliteration of *Voynichese* to readable Latin characters depending on the gylph-to-gylph associations via the specified CSS.
+After the transcriptions are loaded in **Oxygen XML Editor** over `EVA2.ttf`, following which the user must navigate to *Options>Preferences>Document Type Associations>Create New TEI Association* under the said Editor IN ORDER TO MAKE SURE THE MENTIONED XML FILES ARE CORRECTLY REINTERPRETED AND REPARSED, the stylesheet executes a deterministic, nested `oxy_replace()` pipeline that converts Voynichese glyphs into **Mathematical Sans-Serif Unicode** (`U+1D5A0`–`U+1D5FF`) characters. *The Yarman Mapping* is hence a cascading list for the serial, non-clashing, and uninterrupted transliteration of *Voynichese* to readable Latin characters depending on the gylph-to-gylph associations via the specified CSS.
 
 Rather than treating *Voynichese* as standard vernacular prose, the *Yarman Mapping* models the 15th-century codex as a **Byzantine Greek Orthodox grimoire / mnemonic ritual book** (analogous to an Arabic *Jifr* in a Middle Eastern Islamic context). Under this hypothesis, the scribe seems to have prosodically adapted the opening structure of the **Great Doxology**, and embedded historical Christian *Nomina Sacra* (`𝖨𝖧𝚺`, `𝖨𝚺`) alongside three more of the five **ΙΧΘΥΣ** (*ICHTHYS*) acrostic/rebus roots (`𝖳𝖧𝖤𝖮𝖴`, `𝖸𝖨𝖮𝖲`, `𝖷𝖱𝖨𝖲𝖳𝖮𝖴`) into continuous, block-chopped phonetic vocalizations of the name of Jesus (*Iesous*) and His epithets across hundreds of folios.
 
@@ -29,7 +29,7 @@ Later revisions to the approach presented herein might consider adding the curre
 
 1. **Phase 1 — Byzantine Liturgical Chant Book & *Ison* Drone Conjecture (Nov 1–8, 2026)**
    - *Videos:* [A Voynich Discovery?](https://www.youtube.com/watch?v=IH_GbDw_Y24) | [The awaited Voynich Breakthrough?](https://www.youtube.com/watch?v=IH_GbDw_Y24) | [Full Voynich Decipherment](https://www.youtube.com/watch?v=sUEUlEpmugc);
-   - Initial BBEdit/Oxygen XML calibrations seemed to reveal recurring Latin (*Gloria*, *Gratia*) and Greek theological roots (*Doxa*, *Kyrie*, *Iesous*, *Christos*, *Eleison*) that anyway lacked standard noun declensions and verb conjugations. These were interpreted by Yarman as uninflected "sacramental word blocks" functioning as a shorthand prompt sheet for Byzantine modal chant (*Octoechoi*) over an *ison* drone.
+   - Initial BBEdit/Oxygen XML calibrations seemed to reveal recurring Latin (*Gloria*, *Gratia*) and Greek theological roots (*Doxa*, *Kyrie*, *Iesous*, *Christos*, *Eleison*) that anyway lacked standard noun declensions and verb conjugations. These were interpreted by Yarman as uninflected "sacramental word blocks" functioning as a shorthand prompt sheet for Byzantine modal chant (*Octoechos*) over an *ison* drone.
 2. **Phase 2 — The "Medici Youth" Pedagogical Scrapbook & "Breve Glue" (Nov 8–13, 2026)**
    - *Videos:* [Refined Full Voynich Decipherment](https://www.youtube.com/watch?v=I3Mr4IMzasw) | [Updated Full Voynich Revelation](https://www.youtube.com/watch?v=VnYrOcyYjLU);
    - To account for the manuscript's excessive lexical redundancy, the high-frequency EVA glyph `a` was mapped by Yarman to a Unicode breve (`˘`) that acted as a silent consonantal slurring separator comparable to the Turkish soft G (*ğ*).
@@ -87,7 +87,7 @@ witnesses**. `Herbal.pdf` overlaps both.
 
 ### 2. Opening Sequence (`f1r`, Line 1 — `ZL3b-n_updated.pdf`)
 - **Raw EVA:** `fachys.ykal.ar.ataiin.shol.shory.cthores.y.kor.sholdy ... sory.ckhar.or`
-- **Current CSS Output:** `𝖨𝖧𝚺˘𝗈𝗂𝖲      𝗂𝗈𝖾.𝗂𝗈𝗂𝗒˘𝖲𝗈.˘𝖲.     ˘𝗂𝖲˘𝗒𝖾𝗈𝖲.      𝗈𝗂𝖾𝖲𝗈.𝗈𝗂𝖾𝖲     𝗂𝗈.⟦𝖳𝖧𝖤𝖮𝖴 / 𝗂𝖾𝗂𝖲𝗂𝖾⟧𝖲      𝗂𝗍𝗁𝖾.𝗂𝗈.𝗂𝗒𝗂𝖾𝖲.𝗈𝗂𝖾𝖲       𝗈𝖾𝗒𝗂𝗈 ... 𝖾𝗂𝖾𝖲𝗂𝗈.𝖨𝚺˘𝖲.𝗂𝖾𝖲 ...`
+- **Current CSS Output, with distinct Yarmanian word block separations:** `𝖨𝖧𝚺˘𝗈𝗂𝖲      𝗂𝗈𝖾.𝗂𝗈𝗂𝗒˘𝖲𝗈.˘𝖲.     ˘𝗂𝖲˘𝗒𝖾𝗈𝖲.      𝗈𝗂𝖾𝖲𝗈.𝗈𝗂𝖾𝖲     𝗂𝗈.⟦𝖳𝖧𝖤𝖮𝖴 / 𝗂𝖾𝗂𝖲𝗂𝖾⟧𝖲      𝗂𝗍𝗁𝖾.𝗂𝗈.𝗂𝗒𝗂𝖾𝖲.𝗈𝗂𝖾𝖲       𝗈𝖾𝗒𝗂𝗈 ... 𝖾𝗂𝖾𝖲𝗂𝗈.𝖨𝚺˘𝖲.𝗂𝖾𝖲 ...`
 - **Structure:** Immediately begins with the sacred abbreviation **`𝖨𝖧𝚺`** (*IHS*), followed by breve-separated phonetic punctuations and not-anymore-so-uncertain `<choice>` readings that are cleanly rendered inside `⟦ ... / ... ⟧` brackets.
 
 ### 3. Folio `f49v` (Cyclamen / Lunaria) 26-Mark Vertical Key
@@ -184,7 +184,9 @@ to support any other claim in this repository.
 > not apply to v1.0 and is withdrawn. `𝖪𝖸𝖱𝖨𝖤` (vocative) occurs 10 times in
 > `ZL3b-n_updated.pdf` and 4 times in `Herbal.pdf`.
 >
-> Later revisions might consider re-substituting `𝖸𝖨𝖮𝖴` and `𝖪𝖸𝖱𝖨𝖤` to prominence.
+> Possible future revisions that may feature restoring sh → YIOU, along with the
+> re-substitution of `𝖪𝖸𝖱𝖨𝖤` to prominence, would constitute a separate hypothesis
+> that would require independent testing later on.
 
 ---
 
@@ -212,7 +214,7 @@ Based on independent technical audits conducted up until November 19, 2026, the 
 - [x] **Transcription Braces & Apostrophes:** Editorial apostrophes (`'`) were converted along with the Voynichese letters, and curly-brace ligature wrappers (`{cto}`) were isolated in order that the transcription formatting of the characters would not leak into the phonetic output.
 - [x] **Unicode Normalization:** Wrapping the relevant `oxy` string in `Math Unicode` leads to the direct substitution of Voynichese letters without any misplacement or disassociation due to the flawless cascading operation during the execution of the code.
 - [x] **Non-Breaking Separators:** Standard spaces inside multi-word sacred outputs like `𝖧𝖠𝖦𝖨𝖮𝖴 𝖯𝖭𝖤𝖴𝖬𝖠𝖳𝖮𝖲` were replaced by Math Unicode dashes to preserve 1-to-1 token boundaries during statistical scans.
-- [x] **Separation of Layers in Publication:** Vividly distinguishing between (a) the deterministic CSS transliteration outputs and (b) the interpretive hypotheses regarding *Octoechoi* cantillation and grimoire/ritual usage can now be tackled thanks to the pristine latinized display on screen.
+- [x] **Separation of Layers in Publication:** Vividly distinguishing between (a) the deterministic CSS transliteration outputs and (b) the interpretive hypotheses regarding *Octoechos* cantillation and grimoire/ritual usage can now be tackled thanks to the pristine latinized display on screen.
 
 ---
 
@@ -245,7 +247,7 @@ Drawing directly from the video explanations on his YouTube channel, here is the
 ### Phase 1: The Monastic Hymn & Chant Book Hypothesis (Nov 1–8, 2026)
 
 * **Software Pipeline:** In his initial breakthrough videos, Yarman introduced his dual-software workflow: calibrating character mappings in **BBEdit** and executing nested `oxy_replace` CSS rules inside **Oxygen XML Editor** over TEI-encoded Extensible Voynich Alphabet (EVA) files in XML format.
-* **Liturgical Interpretation:** Observing recurring Greek-sounding roots (*Doxa*, *Kyrie*, *Christos*, *Eleison*), he initially concluded the manuscript was an uninflected **Eastern Orthodox liturgical chant book** written by mountain-dwelling monks. Because the output lacked standard Greek noun declensions and verb conjugations, he proposed it was a shorthand prompt sheet meant to be sung over an *ison* drone in the Byzantine modal (*Octoechoi*) tradition, where the glyphs themselves might have acted as a hidden musical notation.
+* **Liturgical Interpretation:** Observing recurring Greek-sounding roots (*Doxa*, *Kyrie*, *Christos*, *Eleison*), he initially concluded the manuscript was an uninflected **Eastern Orthodox liturgical chant book** written by mountain-dwelling monks. Because the output lacked standard Greek noun declensions and verb conjugations, he proposed it was a shorthand prompt sheet meant to be sung over an *ison* drone in the Byzantine modal (*Octoechos*) tradition, where the glyphs themselves might have acted as a hidden musical notation.
 
 ---
 
