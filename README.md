@@ -1,5 +1,5 @@
 ## Voynich_Manuscript_Decipherment_reveals_ByzantineOrthodoxGrimoire
-The *Yarman Mapping* using CSS and Oxygen XML editor reveals that the [@*Voynich Manuscript*](https://en.wikipedia.org/wiki/Voynich_manuscript) is likely a **spell book**, or a **black magic chant book** choke full of *macaronic Greek* pronunciations of the name of **Jesus Christ (S.A.W.)**, where His Christian epithets like *YIOS* and associations like *THEO* are acrostically used as syllabic content to sometimes constitute his flexed out and musicologically suggestive repetitious name that is chaotically laid out across regular-sized word-blocks for hunderds of pages, as preliminarily tackled here [@Updated Full Voynich Revelation](https://www.youtube.com/watch?v=VnYrOcyYjLU&amp;t=16s) and here [@Voynich is a BLACK MAGIC BOOK!!](https://www.youtube.com/watch?v=kRqcrFLZz6o&amp;t=130s).
+The *Yarman Mapping* using CSS and Oxygen XML editor reveals that the [@*Voynich Manuscript*](https://en.wikipedia.org/wiki/Voynich_manuscript) is likely a **spell book**, or a **black magic chant book** chock-full of *macaronic Greek* pronunciations of the name of **Jesus Christ (S.A.W.)**, where His Christian epithets like *YIOS* and associations like *THEO* are acrostically used as syllabic content to sometimes constitute his flexed out and musicologically suggestive repetitious name that is chaotically laid out across regular-sized word-blocks for hundreds of pages, as preliminarily tackled here [@Updated Full Voynich Revelation](https://www.youtube.com/watch?v=VnYrOcyYjLU&amp;t=16s) and here [@Voynich is a BLACK MAGIC BOOK!!](https://www.youtube.com/watch?v=kRqcrFLZz6o&amp;t=130s). This upload is version 1.0, with subsequent revisions and additions to be indicated much further below.
 
 
 # The Yarman Mapping: Voynich Manuscript TEI/CSS Transliteration & Byzantine Greek Grimoire Hypothesis
@@ -85,7 +85,7 @@ witnesses**. `Herbal.pdf` overlaps both.
 - **Structure:** Immediately begins with the sacred abbreviation **`𝖨𝖧𝚺`** (*IHS*), followed by breve-separated phonetic punctuations and not-anymore-so-uncertain `<choice>` readings that are cleanly rendered inside `⟦ ... / ... ⟧` brackets.
 
 ### 3. Folio `f49v` (Cyclamen / Lunaria) 26-Mark Vertical Key
-On folio `f49v` (`Herbal.pdf` p. 74, corresponding to p. 96 of the original digitized pagination), a vertical column of 26 Voynichese characters, a vertical column of 26 Voynichese characters runs down the left margin, along with handwritten Arabic numerals `1–5` right next to them that correspond to the first paragraph's second, third, fourth, fifth, and sixth lines, respectively. Under the current `evaFontCSS.css` rules, the 26-mark column renders deterministically without rearrangement:
+On folio `f49v` (`Herbal.pdf` p. 74, corresponding to p. 96 of the original digitized pagination), a vertical column of 26 Voynichese characters runs down the left margin, along with handwritten Arabic numerals `1–5` right next to them on their LHS that correspond to the first paragraph's second, third, fourth, fifth, and sixth lines, respectively. Under the current `evaFontCSS.css` rules, the 26-mark column renders deterministically without rearrangement:
 
 ```text
 f  -> 𝖨𝖧𝚺
@@ -116,14 +116,14 @@ k  -> 𝗂𝗒
 y  -> 𝗂𝗈
 ```
 
-where Yarman interprets `𝖲𝗈𝗎` as either `𝖲𝗈𝗎` or `𝖲𝗈𝗇`, and `𝗂𝗍𝗁` as either (𝗂 + 𝗍𝗁) or as (𝗂 + 𝖲) depending on the circumstance. As such, this new arrangement spells out: ``IHΣ, IESIOIS ELIYESON! IE KYRIIOIS ELEISON! IE KYRIIOIS ELEIOI THIYIO!``
+where Yarman proposes to interpret `𝖲𝗈𝗎` as either `𝖲𝗈𝗎` or `𝖲𝗈𝗇`, and `𝗂𝗍𝗁` as either (𝗂 + 𝗍𝗁) or as (𝗂 + 𝖲) depending on the circumstance. As such, this new arrangement spells out: ``IHΣ, IESIOIS ELIYESON! IE KYRIIOIS ELEISON! IE KYRIIOIS ELEIOI THIYIO!``
 
 
 **Applied vocalization rules stated in full:**
 1. Marks 5, 13, 20 (`e`): `𝗂𝗍𝗁` read as (𝗂 + 𝖲) → `iS`. Three substitutions, −3 characters.
 2. Mark 24 (`e`): `𝗂𝗍𝗁` read literally as (𝗂 + 𝗍𝗁), retained across the unit boundary.
 3. Mark 22 (`d`): `𝖾𝗒` read as `e`, the `y` elided in cantillation. One elision, −1 character.
-4. `𝖲𝗈𝗎` transformed to `Son` twice.
+4. `𝖲𝗈𝗎` is transformed to `Son` twice.
 
 Net: 61 → 57 characters. Rules 1 and 2 are the alternatives declared above.
 Rule 3 is an elision and is stated here explicitly rather than applied silently.
@@ -202,7 +202,7 @@ Based on independent technical audits conducted up until November 19, 2026, the 
 
 - [x] **Explicit Long-Ligature Handling:** Priority rules work for gallows and special ligatures (`cth`, `ckh`, `cfh`, `cph`, `c„h`, `cÄh`, `cØh`, `c‹h`) at the top of the `oxy_replace` stack, so they are not misprocessed due to the stripping of their vital sub-characters by a shorter segmentation hunt during the operational cascade.
 - [x] **Transcription Braces & Apostrophes:** Editorial apostrophes (`'`) were converted along with the Voynichese letters, and curly-brace ligature wrappers (`{cto}`) were isolated in order that the transcription formatting of the characters would not leak into the phonetic output.
-- [x] **Unicode Normalization:** Wrapping the relevant `oxy` string in `Math Unicode` led to the direct substititon of Voynichese letters without any misplacement or dissasociation due to the cascading operation during the execution of the code.
+- [x] **Unicode Normalization:** Wrapping the relevant `oxy` string in `Math Unicode` led to the direct substitution of Voynichese letters without any misplacement or disassociation due to the cascading operation during the execution of the code.
 - [x] **Non-Breaking Separators:** Standard spaces inside multi-word sacred outputs like `𝖧𝖠𝖦𝖨𝖮𝖴 𝖯𝖭𝖤𝖴𝖬𝖠𝖳𝖮𝖲` were replaced by Math Unicode dashes to preserve 1-to-1 token boundaries during statistical scans.
 - [x] **Separation of Layers in Publication:** Vividly distinguishing between (a) the deterministic CSS transliteration outputs and (b) the interpretive hypotheses regarding *Octoechos* musical cantillation and grimoire/ritual usage can now be tackled thanks to the pristine latinized display on screen.
 
@@ -212,7 +212,7 @@ Based on independent technical audits conducted up until November 19, 2026, the 
 
 1. Clone this repository or download `evaFontCSS.css`, `EVA2.ttf`, and the updated XML files (`herbal.xml`, `ZL3b-n.xml`, and `ZL3b-n_updated.xml`);
 2. Ensure `EVA2.ttf` and `evaFontCSS.css` reside in the same directory as the `.xml` files;
-3. Open `herbal.xml`, `ZL3b-n.xml`, and/or `ZL3b-n_updated.xml in **Oxygen XML Editor** and switch to **Author Mode** to view the live, automated transliteration.
+3. Open `herbal.xml`, `ZL3b-n.xml`, and/or `ZL3b-n_updated.xml` in **Oxygen XML Editor** and switch to **Author Mode** to view the live, automated transliteration.
 
 ---
 
